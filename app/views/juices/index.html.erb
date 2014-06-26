@@ -1,0 +1,22 @@
+<%= form_for @juice do |f| %>
+  <p>
+    <%= f.label :flavor %>
+    <%= f.text_field :flavor %>
+  </p>
+  <p>
+    <%= f.label :ingredients %>
+    <%= f.text_field :ingredients %>
+  </p>
+  <p>
+    <%= f.submit 'Create juice' %>
+  </p>
+<% end %>
+
+<% @juices.each do |juice| %>
+<ul>
+  <li>
+    <%= juice.flavor %><br>
+  <%= juice.ingredients %>
+  </li>
+</ul>
+<% end %>
