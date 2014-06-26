@@ -29,6 +29,12 @@ class JuicesController < ApplicationController
     redirect_to juices_path
   end
 
+  def destroy
+    @juice = Juice.find(params[:id]).delete
+
+    redirect_to juices_path
+  end
+
   private
 
   def juice_params
