@@ -8,15 +8,6 @@
     <%= f.text_field :ingredients %>
   </p>
   <p>
-    <%= f.submit 'Create juice' %>
+    <%= f.submit 'Update' %>
   </p>
-<% end %>
-
-<% @juices.each do |juice| %>
-<ul>
-  <li>
-    <%= link_to juice.flavor, juice_path(juice) %><br>
-  <%= juice.ingredients %>
-  </li>
-</ul>
 <% end %>

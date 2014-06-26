@@ -14,6 +14,21 @@ class JuicesController < ApplicationController
     end
   end
 
+  def show
+    @juice = Juice.find(params[:id])
+  end
+
+  def edit
+    @juice = Juice.find(params[:id])
+  end
+
+  def update
+    @juice = Juice.find(params[:id])
+    @juice.update_attributes!(juice_params)
+
+    redirect_to juices_path
+  end
+
   private
 
   def juice_params
